@@ -1,0 +1,51 @@
+@CHARSET "ISO-8859-1";
+
+.whiteFont {
+  color: #F5245F;
+  text-align: center;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  text-shadow: 0 0 6px rgba(255,255,86,0.7) ;
+}
+
+.modal-content {
+background-color: #000;	
+color: #F4425C;
+ font-weight: bold;
+}
+
+.btnPink{
+	background-color: #F4425C;	
+	color: #FFFFFF;
+	 font-weight: bold;
+}
+
+.whiteFontForm {
+	font-size: 16px;
+  color: #F5245F;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  text-shadow: 0 0 6px rgba(255,255,86,0.7) ;
+}
+
+.whiteColor{
+	color: #FFFFFF;
+	font-weight: bold;
+}
+
+.leftTalent{
+	color: #FFFFFF;
+	background-color: #FFC0CB;	
+	font-weight: bold;
+	border-radius:10px;
+	padding:10px;
+	margin-right:5px;
+}
+
+.rightTalent{
+	color: #FFFFFF;
+	background-color: #8B2252;	
+	font-weight: bold;
+	border-radius:10px;
+	padding:10px;
+}

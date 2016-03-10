@@ -1,0 +1,76 @@
+      
+        <main id="main">
+            <!-- PAGE TITLE -->
+            <div id="page-title">
+                <h1><span>Contact Us</span></h1>
+            </div>
+            <!-- PAGE CONTAINER -->
+            <div id="page-container">
+                <!-- GRID -->
+                <div class="grid">
+                    <div class="unit half">
+                        <p>Please reach out to us by filling the below form.</p>
+                        <!-- CONTACT FORM -->
+                        <form class="form-box" action="processform.php" method="post">
+                            <label>Full name :</label>
+                            <input type="text" name="senderName" id="senderName" required="required" maxlength="50" />
+                            <label>Phone Number :</label>
+                            <input type="number" name="phoneNumber" id="phoneNumber" required="required" />
+                            <label>Email address :</label>
+                            <input type="email" name="senderEmail" id="senderEmail" required="required" maxlength="50" />
+                            <label>Message :</label>
+                            <textarea name="message" id="message" required="required"></textarea>
+                            <input type="submit" id="sendMessage" name="sendMessage" value="Send Message" />
+                        </form>
+                    </div>
+                    <div class="unit half">
+                        <img src="images/photos/800x450.png" class="flex-img" alt="" />
+                        <div class="ombre-box">
+                            <!-- TABLE -->
+                            <ul class="ombre-table">
+                                <li>
+                                    <div class="ombre-table-left"><i class="ombre-icon fa fa-phone-square"></i>Phone</div>
+                                    <div class="ombre-table-right">234-435-4345</div>
+                                </li>
+                                <li>
+                                    <div class="ombre-table-left"><i class="ombre-icon fa fa-envelope"></i>E-mail</div>
+                                    <div class="ombre-table-right"><a href="mailto:info@company.com">info@company.com</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ombre-table-left"><i class="ombre-icon fa fa-map"></i>Address</div>
+                                    <div class="ombre-table-right">144 King St Melbourne</div>
+                                </li>
+                                <li>
+                                    <div class="ombre-table-left"><i class="ombre-icon fa fa-fax"></i>Fax</div>
+                                    <div class="ombre-table-right">234-435-4346</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- GRID BORDER -->
+                <div class="grid-border"></div>
+                <!-- GRID -->
+                <div class="grid">
+                    <div class="unit whole">
+                        <!-- GOOGLE MAP -->
+                        <div id="google-map" class="flex-iframe widescreen"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+      
+    <!-- GOOGLE MAP -->
+    <script type="text/javascript" src="js/dvmap.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            jQuery("#google-map").dvmap({
+                container: 'google-map', // map container id
+                latitute: '40.714353', // latitute
+                longitude: '-74.005973', // longtitude
+                zoom: 17, // a numeric value between 0-19
+                grayscale: true // true or false
+            });
+        });
+    </script>

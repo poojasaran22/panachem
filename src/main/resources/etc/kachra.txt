@@ -1,0 +1,58 @@
+-- CREATE TABLE "user" -----------------------------------------
+CREATE TABLE "public"."user" (
+	id Serial NOT NULL,
+	username Character Varying( 2044 ) NOT NULL UNIQUE,
+	password Character Varying( 2044 ) NOT NULL,
+	type Character Varying( 2044 ) NOT NULL,
+	extracol Character Varying( 2044 )
+, CONSTRAINT "unique_username" UNIQUE( username ) );
+CREATE INDEX "index_username" ON "public"."user" USING btree( username);
+-- -------------------------------------------------------------;
+
+
+ALTER TABLE "public"."pmodel" ADD COLUMN modelid Integer ;
+
+
+http://localhost:8080/panachem/model/login
+
+
+{
+    "username":"alisha@gmail.com",
+    "password" : "Brow"
+}
+
+
+
+
+
+ psql -h localhost -U tmtadmin -d tmtdb -p 5432
+=====================================
+
+http://localhost:8080/panachem/model/signup
+
+{
+    "username":"alisha@gmail.com",
+    "password" : "Brown",
+    "talentType" : "TALENT",
+    "name": "Hot bebe",
+    "bust": 32,
+    "country": "US",
+    "experience": "No Experience",
+    "extra_tag": "Dancer, Actress, Singer, Musician, Acrobatics and Gymnastics, Sports, Voice Over, Basic French and Italian",
+    "eyes": "Green",
+    "field": "",
+    "hair": "Brown",
+    "height": 5.0,
+    "shoes": 10,
+    "type": "Model",
+    "waist": 26,
+    "lookslike": "Cute Alisha",
+    "edu_q_map_list" : [
+        {
+            "line1": "Bachelor of Fine Arts",
+             "line2": "Fashion Design Degree",
+     "description": "A Bachelor of Fine Arts in Fashion Design reinforces students ability to work with varying fabric textures, styles, and techniques. Throughout the program, students build their illustration, aesthetic and production skills through studio and classroom settings."
+        }
+    ]
+
+}

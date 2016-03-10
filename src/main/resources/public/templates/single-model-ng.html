@@ -1,0 +1,165 @@
+
+        <main id="main">
+            <div id="page-title">
+                <h1><span>{{profile.name}}</span></h1>
+            </div>
+            <!-- PAGE CONTAINER -->
+            <div id="page-container">
+                <!-- GRID -->
+                <div class="grid">
+                    <div class="unit golden-large">
+                        <!-- MODEL CAROUSEL -->
+                        <div id="model-gallery" class="owl-carousel">
+                            <!-- IMAGE -->
+                            <div class="ombre-carousel">
+                                <a href="images/photos/model-slider1.jpg" class="gallery photo" data-title="Lorem Ipsum Dolor">
+                                    <img src="images/photos/model-slider1.jpg" alt="" />
+                                </a>
+                            </div>
+                            <!-- IMAGE -->
+                            <div class="ombre-carousel">
+                                <a href="images/photos/model-slider2.jpg" class="gallery photo" data-title="Lorem Ipsum Dolor">
+                                    <img src="images/photos/model-slider2.jpg" alt="" />
+                                </a>
+                            </div>
+                            <!-- IMAGE -->
+                            <div class="ombre-carousel">
+                                <a href="images/photos/model-slider3.jpg" class="gallery photo" data-title="Lorem Ipsum Dolor">
+                                    <img src="images/photos/model-slider3.jpg" alt="" />
+                                </a>
+                            </div>
+                            <!-- IMAGE -->
+                            <div class="ombre-carousel">
+                                <a href="images/photos/model-slider4.jpg" class="gallery photo" data-title="Lorem Ipsum Dolor">
+                                    <img src="images/photos/model-slider4.jpg" alt="" />
+                                </a>
+                            </div>
+                        </div>
+                        <!-- EXPERIENCES -->
+                        <h3 class="border">Education & Qualification</h3>
+                        <div class="experience-box">
+                            <div class="experience-title">
+                                <h5>{{profile.edu_qc[0].line1}}</h5>
+                                <p>{{profile.edu_qc[0].line2}}</p>
+                            </div>
+                            <p>{{profile.edu_qc[0].description}}</p>
+                        </div>
+                        <div class="experience-box">
+                            <div class="experience-title">
+                                <h5>{{profile.edu_qc[1].line1}}</h5>
+                                <p>{{profile.edu_qc[1].line2}}</p>
+                            </div>
+                            <p>{{profile.edu_qc[1].description}}</p>
+                        </div>
+                    </div>
+                    <div class="unit golden-small">
+                        <img class="flex-img" src="images/photos/model5.jpg" />
+                        <div class="ombre-box">
+                            <!-- TABLE -->
+                            <ul class="ombre-table">
+                                <li>
+                                    <div class="ombre-table-left">HEIGHT</div>
+                                    <div class="ombre-table-right">{{profile.height}}</div>
+                                </li>
+                                <li>
+                                    <div class="ombre-table-left">HAIR</div>
+                                    <div class="ombre-table-right">{{profile.hair}}</div>
+                                </li>
+                                <li>
+                                    <div class="ombre-table-left">EYES</div>
+                                    <div class="ombre-table-right">{{profile.eyes}}</div>
+                                </li>
+                                <li>
+                                    <div class="ombre-table-left">BUST</div>
+                                    <div class="ombre-table-right">{{profile.bust}}</div>
+                                </li>
+                                <li>
+                                    <div class="ombre-table-left">WAIST</div>
+                                    <div class="ombre-table-right">{{profile.waist}}</div>
+                                </li>
+                                <li>
+                                    <div class="ombre-table-left">SHOE</div>
+                                    <div class="ombre-table-right">{{profile.shoes}}</div>
+                                </li>
+                            </ul>
+                            <p>{{profile.extra_tag}}</p>
+                            <ul class="social-icons model-social">
+                                <li>
+                                    <a href="#" class="fa fa-twitter tooltip-pink" title="Twitter">Twitter</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="fa fa-instagram tooltip-pink" title="Instagram">Instagram</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="fa fa-vimeo tooltip-pink" title="Vimeo">Vimeo</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    <!-- MAIN JS FILES -->
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <!-- FAKE LOADER -->
+    <script type="text/javascript" src="js/fakeloader.js"></script>
+    <!-- BACKSTRETCH (BG IMAGE AND FEATURED IMAGE) -->
+    <script type="text/javascript" src="js/backstretch.min.js"></script>
+    <!-- CAROUSELS -->
+    <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+    <!-- MODEL CAROUSEL -->
+    <script type="text/javascript">
+        jQuery(window).load(function () {
+            jQuery("#model-gallery").owlCarousel({
+                items: 1,
+                autoplay: true,
+                autoplayTimeout: 4000,
+                autoplayHoverPause: true,
+                dots: true,
+                autoHeight: true,
+                margin: 100,
+                mouseDrag: false,
+                smartSpeed: 800,
+                navText: ['', ''],
+                nav: false,
+                loop: true,
+                animateIn: 'zoomIn',
+                animateOut: 'zoomOut'
+            });
+        });
+    </script>
+    <!-- RESPONSIVE VIDEO -->
+    <script type="text/javascript" src="js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="js/jquery.prettyembed.min.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            jQuery(".flex-video").prettyEmbed({
+                customPreviewImage: 'images/photos/img4.jpg',
+                // Embed controls
+                showInfo: false,
+                showControls: true,
+                loop: false,
+                showRelated: false,
+                useFitVids: true
+            });
+        });
+    </script>
+    <!-- TOOLTIPS -->
+    <script type="text/javascript" src="js/jquery.tooltipster.min.js"></script>
+    <!-- COLORBOX -->
+    <script type="text/javascript" src="js/colorbox.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            jQuery("#model-gallery a").colorbox({
+                rel: 'photo-gallery',
+                title: function () {
+                    return jQuery(this).data('title');
+                },
+                maxWidth: '100%',
+                maxHeight: '100%'
+            });
+        });
+    </script>
+    <!-- CUSTOM JS -->
+    <script type="text/javascript" src="js/custom.js"></script>
